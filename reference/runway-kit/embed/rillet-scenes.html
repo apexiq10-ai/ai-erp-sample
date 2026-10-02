@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070011">
+  <meta name="description" content="Two cinematic, interactive Rillet product marketing scenes.">
+  <title>Rillet · The system of proof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./rillet-scenes.css">
+</head>
+<body>
+  <!-- Three source files: this HTML, rillet-scenes.css, rillet-scenes.js. Keep the packaged MP4s beside them. -->
+  <div class="rs" id="rillet-scenes" tabindex="0" aria-label="Rillet system of proof interactive story">
+    <div class="rs-world" aria-hidden="true">
+      <div class="rs-fallback"></div>
+      <video id="rs-film-heroics" class="rs-film" poster="./heroics-poster.jpg" muted loop playsinline preload="metadata"></video>
+      <video id="rs-film-close" class="rs-film" poster="./bring-your-last-close-poster.jpg" muted loop playsinline preload="metadata"></video>
+      <div class="rs-shade"></div>
+      <div class="rs-grain"></div>
+    </div>
+
+    <header class="rs-header">
+      <div class="rs-identity"><strong>Rillet<span>®</span></strong><span class="rs-identity-rule"></span><span>SYSTEM OF PROOF</span></div>
+      <div class="rs-header-controls"><span class="rs-header-note">AN INDEPENDENT PMM CONCEPT</span><button id="rs-motion" class="rs-motion" type="button" aria-label="Pause motion" aria-pressed="false">MOTION <span>ON</span></button><button id="rs-index-toggle" class="rs-index-toggle" type="button" aria-expanded="false" aria-controls="rs-index">INDEX <span>＋</span></button></div>
+    </header>
+
+    <nav class="rs-index" id="rs-index" aria-label="Scene index" hidden>
+      <p>THE STORY <span>01 — 02</span></p>
+      <button type="button" data-goto="0"><span>01</span><strong>Heroics don't scale.</strong><small>THE PRODUCT INSIGHT</small></button>
+      <button type="button" data-goto="1"><span>02</span><strong>Bring your last close.</strong><small>THE NEXT ACTION</small></button>
+      <div class="rs-index-foot">SCROLL · SWIPE · ARROW KEYS</div>
+    </nav>
+
+    <main class="rs-stage">
+      <section class="rs-scene is-active" id="rs-scene-heroics" data-scene="0" aria-labelledby="rs-heroics-title">
+        <div class="rs-scene-content">
+          <div class="rs-topline"><span>01 / 02</span><span>THE PRODUCT INSIGHT</span></div>
+          <h1 id="rs-heroics-title">HEROICS<br>DON'T SCALE.<br><em>LEDGERS DO.</em></h1>
+          <div class="rs-scene-bottom"><p>A fast close once is a long weekend. At three times the volume, it takes infrastructure.</p><button class="rs-explore" id="rs-open-proof" type="button" aria-expanded="false" aria-controls="rs-proof-detail"><span class="rs-plus">＋</span><span>EXPLORE THE<br>EVIDENCE</span></button></div>
+        </div>
+        <p class="rs-side-note">FIG. 01 / EVERY NUMBER, ALL THE WAY DOWN</p>
+      </section>
+
+      <section class="rs-scene" id="rs-scene-close" data-scene="1" aria-labelledby="rs-close-title" hidden>
+        <div class="rs-scene-content">
+          <div class="rs-topline"><span>02 / 02</span><span>THE NEXT ACTION</span></div>
+          <h1 id="rs-close-title">BRING<br>YOUR LAST<br><em>CLOSE.</em></h1>
+          <div class="rs-scene-bottom"><p>One closed month. Your signed numbers. An accountable comparison.</p><button class="rs-explore" id="rs-open-close" type="button" aria-expanded="false" aria-controls="rs-close-detail"><span class="rs-plus">＋</span><span>SEE THE<br>PARALLEL CLOSE</span></button></div>
+        </div>
+        <p class="rs-side-note">FIG. 02 / LET THE EVIDENCE MAKE THE CASE</p>
+      </section>
+    </main>
+
+    <div class="rs-detail" id="rs-proof-detail" role="dialog" aria-modal="true" aria-label="Trace a number through five evidence layers" hidden>
+      <div class="rs-detail-header"><span>01 / THE CORE SAMPLE</span><button type="button" class="rs-close-detail" data-close-detail aria-label="Close evidence view">CLOSE <span>×</span></button></div>
+      <div class="rs-detail-body"><div class="rs-detail-left"><p>ONE NUMBER.<br>FIVE LAYERS.<br><em>NO GAPS.</em></p><span>ILLUSTRATIVE VISUALIZATION, NOT CUSTOMER DATA.</span></div><div class="rs-detail-right"><div class="rs-detail-number" id="rs-layer-count">01 / 05</div><div class="rs-detail-main" aria-live="polite"><span id="rs-layer-kicker">REPORTED LINE</span><strong id="rs-layer-value">$4.28M</strong><p id="rs-layer-detail">The figure in the report. The question is what sits beneath it.</p></div><div class="rs-detail-nav" role="group" aria-label="Evidence layers"><button type="button" class="is-active" data-layer="0" aria-pressed="true">01 <span>REPORT</span></button><button type="button" data-layer="1" aria-pressed="false">02 <span>ENTRIES</span></button><button type="button" data-layer="2" aria-pressed="false">03 <span>SOURCES</span></button><button type="button" data-layer="3" aria-pressed="false">04 <span>PROPOSAL</span></button><button type="button" data-layer="4" aria-pressed="false">05 <span>APPROVAL</span></button></div><button id="rs-next-layer" class="rs-detail-next" type="button">TRACE NEXT LAYER <span>↓</span></button></div></div>
+    </div>
+
+    <div class="rs-detail" id="rs-close-detail" role="dialog" aria-modal="true" aria-label="Explore a proposed Parallel Close" hidden>
+      <div class="rs-detail-header"><span>02 / THE PARALLEL CLOSE</span><button type="button" class="rs-close-detail" data-close-detail aria-label="Close Parallel Close view">CLOSE <span>×</span></button></div>
+      <div class="rs-detail-body"><div class="rs-detail-left"><p>YOUR CLOSE.<br>OUR LEDGER.<br><em>ONE TEST.</em></p><span>PROPOSED EVALUATION MOTION, SUBJECT TO RILLET APPROVAL.</span></div><div class="rs-detail-right"><div class="rs-detail-number" id="rs-step-count">01 / 04</div><div class="rs-detail-main" aria-live="polite"><span id="rs-step-kicker">01 / SCOPE</span><strong id="rs-step-title">Agree on the test.</strong><p id="rs-step-detail">Choose a signed period, a controller sponsor, the inputs, and the definition of a successful tie-out.</p></div><div class="rs-detail-nav four" role="group" aria-label="Parallel Close steps"><button type="button" class="is-active" data-step="0" aria-pressed="true">01 <span>SCOPE</span></button><button type="button" data-step="1" aria-pressed="false">02 <span>REPLAY</span></button><button type="button" data-step="2" aria-pressed="false">03 <span>TIE OUT</span></button><button type="button" data-step="3" aria-pressed="false">04 <span>DECIDE</span></button></div><button id="rs-next-step" class="rs-detail-next" type="button">NEXT STEP <span>→</span></button></div></div>
+    </div>
+
+    <footer class="rs-footer"><div class="rs-footer-left"><span class="rs-live-dot"></span><span>THE LEDGER THAT SHOWS ITS WORK</span></div><div class="rs-scene-nav"><button id="rs-prev" type="button" aria-label="Previous scene">←</button><span id="rs-scene-label">01 / HEROICS DON'T SCALE</span><button id="rs-next" type="button" aria-label="Next scene">→</button></div><div class="rs-footer-right">ILLUSTRATIVE MOTION · NOT PRODUCT FOOTAGE</div></footer>
+  </div>
+  <script src="./rillet-scenes.js" defer></script>
+</body>
+</html>

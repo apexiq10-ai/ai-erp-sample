@@ -1,0 +1,6 @@
+reference
+tests
+.next
+out
+node_modules
+*.tsbuildinfo
