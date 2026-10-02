@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Fragment, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { a5, appendixList, proof, s01, s02, s03, s05, s06, s07, s08, sections } from "@/content";
-import { B, Frame, Mark, Ref, StageClip, pad2, useDeck, useSection } from "@/components/ui";
+import { B, Frame, Mark, Ref, pad2, useDeck, useSection } from "@/components/ui";
+import { StageArt, type ArtKind } from "@/components/sections/Vignettes";
 import { hotspotEls, journeyStage, openEls, openTarget, openTouched, stackHover, useJourney, useStackHover, useWorld, worldStore } from "@/components/world/store";
 import { STACK_LAYERS, layerOfStep, openStepFor, stepOfLayer } from "@/components/world/interaction";
 import { ProofExplorer } from "@/components/sections/Proof";
@@ -371,16 +372,17 @@ export function S05() {
                 <span className="quote">“{r.quote}”</span>
               </button>
               {on && (
+                /* one grid with the row above: labels under the role, points under the quote */
                 <div className="map">
-                  <div>
-                    <p className="lbl mute">{s05.labels[0]}</p>
+                  <p className="lbl mute map-k">{s05.labels[0]}</p>
+                  <div className="map-v">
                     <p className="who">{r.buys}</p>
                     <p className="lbl mute stakes">{r.stakes}</p>
                   </div>
                   {([r.hard, r.trigger, r.say] as string[][]).map((list, n) => (
-                    <div key={n}>
-                      <p className="lbl mute">{s05.labels[n + 1]}</p>
-                      <ul>
+                    <Fragment key={n}>
+                      <p className="lbl mute map-k">{s05.labels[n + 1]}</p>
+                      <ul className="map-v">
                         {list.map((x, m) => (
                           <li key={x}>
                             {x}
@@ -393,7 +395,7 @@ export function S05() {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </Fragment>
                   ))}
                 </div>
               )}
@@ -415,8 +417,8 @@ export function S05() {
 
 /* 06 · SEQUENCE ----------------------------------------------------------
    The phases sit right under the headline. Selecting one (a press or a
-   click) lights its platform in the world and plays its Runway beat; every
-   other clip holds its poster. */
+   click) lights its platform in the world and plays its own code-built
+   animation (Vignettes.tsx); every other phase rests on its finished frame. */
 export function S06() {
   const { step, onScreen, motion } = useSection();
   const { setStep } = useDeck();
@@ -442,7 +444,7 @@ export function S06() {
           return (
             <li key={p.name} className={step >= k + 1 ? (now ? "on cur" : "on") : ""}>
               <button className="phase-btn" onClick={() => setStep("s06", k + 1)} aria-pressed={now}>
-                <StageClip name={p.clip} active={now} visible={onScreen} motion={motion} />
+                <StageArt kind={p.art as ArtKind} active={now} visible={onScreen} motion={motion} />
                 <span className="ph-name">
                   <span className="lbl acc">{p.n}</span>
                   <strong className="display sm">{p.name}</strong>

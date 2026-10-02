@@ -45,7 +45,7 @@ const modeAt = (i: number, step: number): Mode => {
 };
 
 const parseAnchor = (hash: string): [number, number] | null => {
-  const m = /^a([1-6])$/.exec(hash);
+  const m = /^a([1-9])$/.exec(hash);
   if (m) return [APX, Number(m[1]) - 1];
   const i = sections.findIndex((s) => s.id === hash);
   return i >= 0 ? [i, jumpStep(i)] : null;
@@ -441,7 +441,7 @@ export default function Deck() {
           </ol>
           <p className="lbl idx-head">
             <span>{sections[APX].subject}</span>
-            <span>A1 / A6</span>
+            <span>A1 / A{appendixList.length}</span>
           </p>
           <ol className="apx-list">
             {appendixList.map((a, k) => (

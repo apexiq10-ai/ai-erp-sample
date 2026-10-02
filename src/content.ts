@@ -168,7 +168,7 @@ export const s04 = {
 /* ------------------------------------------------------------ 05 BUYERS */
 
 export const s05 = {
-  title: ["Same ledger.", "Different nightmares."],
+  title: ["Same ledger.", "Different stakes."],
   labels: ["Who", "What makes it hard", "Trigger", "How we say it"],
   roles: [
     {
@@ -220,10 +220,10 @@ export const s05 = {
 export const s06 = {
   title: ["Collect the receipts.", "Then turn up the volume."],
   phases: [
-    { n: "01", name: "Harvest", line: "The proof is already in the building.", beat: "Evidence is collected and organized.", clip: "stage-harvest", items: ["20 to 30 close baselines", "Before and after data", "Proof library", "Message tests"] },
-    { n: "02", name: "Prove", line: "Your last close, on our ledger.", beat: "The evidence connects into a reviewed, traceable workflow.", clip: "stage-prove", items: ["Parallel Close", "Controller sponsor", "Auditor walkthrough", "Tie-out to signed numbers"] },
-    { n: "03", name: "Launch", line: "Turn receipts into a category.", beat: "The proof becomes a story the market can see.", clip: "stage-launch", items: ["CEO point of view", "State of the Close", "Recon keynote", "Named customer voices", "Seller readiness"] },
-    { n: "04", name: "Scale", line: "Surround the market.", beat: "The workflow repeats across volume and entities.", clip: "stage-scale", items: ["Vertical playbooks", "Partner co-marketing", "Paid", "Close Club", "Lifecycle", "Advocacy"] },
+    { n: "01", name: "Harvest", line: "The proof is already in the building.", beat: "Evidence is collected and organized.", art: "harvest", items: ["20 to 30 close baselines", "Before and after data", "Proof library", "Message tests"] },
+    { n: "02", name: "Prove", line: "Your last close, on our ledger.", beat: "The evidence connects into a reviewed, traceable workflow.", art: "prove", items: ["Parallel Close", "Controller sponsor", "Auditor walkthrough", "Tie-out to signed numbers"] },
+    { n: "03", name: "Launch", line: "Turn receipts into a category.", beat: "The proof becomes a story the market can see.", art: "launch", items: ["CEO point of view", "State of the Close", "Recon keynote", "Named customer voices", "Seller readiness"] },
+    { n: "04", name: "Scale", line: "Surround the market.", beat: "The workflow repeats across volume and entities.", art: "scale", items: ["Vertical playbooks", "Partner co-marketing", "Paid", "Close Club", "Lifecycle", "Advocacy"] },
   ],
   bottom: ["The receipts exist.", "Job one: collect them."],
   now: "Now playing",
@@ -507,9 +507,61 @@ export const a6: Apx & {
   implication: "Start with one close. Earn each vertical the same way.",
 };
 
+export const a7: Apx & {
+  plumbingLabel: string;
+  plumbing: string[];
+  loopCols: string[];
+  loops: { name: string; reads: string; decides: string; does: string; owner: string; cadence: string }[];
+  reactivationLabel: string;
+  steps: string[];
+  triggerCols: string[];
+  triggers: { stalled: string; missing: string; after: string; reason: string; play: string; success: string }[];
+  eventsNote: string;
+  guardrailsLabel: string;
+  guardrails: string[];
+  hypothesis: string;
+} = {
+  title: "PMM loops",
+  headline: "Build loops, not campaigns. Start with the signups that went quiet.",
+  narrative: [
+    "A campaign ends. A loop reads a signal, makes a decision, acts, and learns from the answer, every cycle.",
+    "Three loops share one event stream: segmentation, go-to-market and reactivation. Reactivation comes first. A dormant signup already raised its hand, and the product data shows exactly where it stopped.",
+    "Rules first, models later. A rule an operator can read beats a score nobody can explain to a controller.",
+  ],
+  exhibit: "Three loops, one event stream",
+  plumbingLabel: "Plumbing",
+  plumbing: [
+    "Product events and CRM activity land in the warehouse",
+    "Rules assign segment, stall point and reason to every account",
+    "A reverse sync writes them back to the CRM and the lifecycle tool",
+    "Every send, reply and session returns as an event",
+  ],
+  loopCols: ["Loop", "Reads", "Decides", "Does", "Owner", "Cadence"],
+  loops: [
+    { name: "Segmentation", reads: "Incumbent ERP, entity count, billing model, funding stage, product events", decides: "Segment, fit tier and buying trigger", does: "Routes the account to its message and play", owner: "PMM with RevOps", cadence: "Weekly" },
+    { name: "Go-to-market", reads: "Message tests, channel touches, stage velocity", decides: "Keep, change or stop each play", does: "Shifts the play mix and budget", owner: "PMM with Demand", cadence: "Monthly" },
+    { name: "Reactivation", reads: "Where a signup stopped, and for how long", decides: "Why it stopped", does: "Sends one matched play, timed to the close calendar", owner: "PMM with Lifecycle and Sales", cadence: "Weekly" },
+  ],
+  reactivationLabel: "The reactivation loop",
+  steps: ["Detect", "Diagnose", "Act", "Measure", "Learn"],
+  triggerCols: ["Stalled at", "Missing event", "After", "Likely reason", "Matched play", "Success event"],
+  triggers: [
+    { stalled: "Signed up", missing: "source_connected", after: "7 days", reason: "Integration effort", play: "Integration walkthrough for Finance Systems", success: "source_connected" },
+    { stalled: "Sources connected", missing: "close_run", after: "14 days", reason: "No clear first step", play: "Parallel Close scoping: bring your last close", success: "parallel_close_start" },
+    { stalled: "Close run", missing: "proposal_reviewed", after: "10 days", reason: "Trust in agent proposals", play: "Auditor evidence package, Close Club peer session", success: "proposal_reviewed" },
+    { stalled: "Active, then quiet", missing: "session", after: "Days 1 to 7", reason: "Close week", play: "Hold. State of the Close on day 10", success: "session" },
+    { stalled: "Outside the core segments", missing: "fit_tier", after: "At signup", reason: "Fit", play: "Partner route and light nurture", success: "partner_referral" },
+  ],
+  eventsNote: "Illustrative event names",
+  guardrailsLabel: "Guardrails",
+  guardrails: ["No outreach in close week", "One play per account at a time", "Every message cites an evidence asset, never a promise", "A person owns every send to a controller"],
+  hypothesis: "Hypothesis · thresholds and plays are starting points, to be set and tested against Rillet product data.",
+  implication: "Build reactivation first: the signal already exists, and the buyer has already said yes once.",
+};
+
 export const apxLabels = { exhibit: "Exhibit", expansion: "Expansion", ease: "Ease of proof", prev: "Previous", next: "Next" };
 
-export const appendixList = [a1, a2, a3, a4, a5, a6].map((a, k) => ({
+export const appendixList = [a1, a2, a3, a4, a5, a6, a7].map((a, k) => ({
   id: `a${k + 1}`,
   index: `A${k + 1}`,
   title: a.title,
@@ -528,5 +580,5 @@ export const sections: SectionMeta[] = [
   { id: "s07", index: "07", subject: "Channels", part: "main", steps: 3, modes: ["night"], read: 1 },
   { id: "s08", index: "08", subject: "Measurement", part: "main", steps: 5, modes: ["night"], read: 1 },
   { id: "s09", index: "09", subject: "Bring your last close", part: "main", steps: 0, modes: ["night"], read: 0 },
-  { id: "apx", index: "A", subject: "Appendix", part: "appendix", steps: 5, modes: ["paper"], read: 0 },
+  { id: "apx", index: "A", subject: "Appendix", part: "appendix", steps: 6, modes: ["paper"], read: 0 },
 ];

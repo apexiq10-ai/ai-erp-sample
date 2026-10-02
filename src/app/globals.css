@@ -326,11 +326,18 @@ main > .sec:not(.w3d) { pointer-events: auto; }
 .buyer .role { color: var(--silver); }
 .buyer .quote { font-family: var(--f-display); font-weight: 500; font-size: clamp(16px, 1.45vw, 24px); letter-spacing: -0.035em; line-height: 1.1; }
 .buyer:hover .quote, .buyers > li.open .quote { color: var(--lavender); }
-.map { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; padding: 4px 0 14px 48px; animation: descend 0.45s var(--ease) both; }
-.map .lbl.mute { margin-bottom: 6px; font-size: 9.5px; }
+/* the open map shares the buyer row's grid: number · role · quote. Labels sit
+   under the role, every point sits under the quote, all on one left edge. */
+.map { display: grid; grid-template-columns: 34px minmax(110px, 0.6fr) 1.4fr; column-gap: 14px; row-gap: 7px; padding: 0 0 10px; animation: descend 0.45s var(--ease) both; }
+.map-k { grid-column: 2; padding-top: 3px; font-size: 9.5px; }
+.map-v { grid-column: 3; display: flex; flex-direction: column; }
 .map .who { font-size: 15px; line-height: 1.3; }
-.map .stakes { margin-top: 8px; font-size: 9.5px; }
-.map li { font-size: 13.5px; line-height: 1.3; padding: 4px 0; border-top: 1px solid var(--line-soft); }
+.map .stakes { margin-top: 4px; font-size: 9.5px; }
+.map li { font-size: 13.5px; line-height: 1.25; padding: 2px 0; border-top: 1px solid var(--line-soft); }
+.map li:first-child { border-top: 0; padding-top: 1px; }
+.s05 .frame { gap: clamp(10px, 1.6vh, 22px); }
+.s05 .buyer { padding: 9px 0; }
+.buyers > li.open { background: linear-gradient(90deg, rgba(8, 8, 9, 0) 0%, rgba(8, 8, 9, 0.6) 40%, rgba(8, 8, 9, 0.72) 100%); }
 .s05-foot { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 
 /* ---------------------------------------------------------- 06 · sequence */
@@ -347,6 +354,39 @@ main > .sec:not(.w3d) { pointer-events: auto; }
 .clip img, .clip video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.4) brightness(0.62); transition: filter 0.4s; }
 .phases > li.cur .clip { border-color: var(--purple); }
 .phases > li.cur .clip img, .phases > li.cur .clip video, .phase-btn:hover .clip img, .phase-btn:hover .clip video { filter: none; }
+/* 06 · the phase animations (Vignettes.tsx). The base frame is the finished
+   state; keyframes run only while .playing, so a paused phase, an unselected
+   one and reduced motion all show the complete picture. */
+.vig svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; transition: opacity 0.4s; }
+.phases > li.cur .vig svg, .phase-btn:hover .vig svg { opacity: 1; }
+.vig:not(.playing) * { animation: none !important; }
+.vig * { transform-box: fill-box; transform-origin: center; }
+.vg-floor { stroke: rgba(255, 255, 255, 0.14); stroke-width: 1; }
+.vg-tile { fill: #45444a; stroke: rgba(255, 255, 255, 0.16); stroke-width: 0.5; }
+.vg-lit { fill: #b7b5bb; }
+.vg-collect { fill: #9b99a0; animation: vg-collect 5s var(--ease) infinite both; }
+@keyframes vg-collect { 0%, 6% { transform: translate(var(--dx), var(--dy)) rotate(var(--r)); opacity: 0.3; fill: #45444a; } 42%, 90% { transform: none; opacity: 1; fill: #9b99a0; } 100% { transform: none; opacity: 0; } }
+.vg-row { animation: vg-row 5s ease infinite both; }
+@keyframes vg-row { 0%, 6% { opacity: 0.22; } 14%, 90% { opacity: 1; } 100% { opacity: 0.22; } }
+.vg-tie { stroke: #e9e7ec; stroke-width: 1; stroke-dasharray: 2 2; }
+.vg-scan { fill: rgba(255, 255, 255, 0.07); opacity: 0; animation: vg-scan 5s linear infinite; animation-delay: 0.3s; }
+@keyframes vg-scan { 0% { transform: translateY(0); opacity: 1; } 56% { transform: translateY(70px); opacity: 1; } 60%, 100% { transform: translateY(70px); opacity: 0; } }
+.vg-approve { fill: var(--purple); animation: vg-approve 5s ease infinite both; }
+.vg-approve-ring { fill: none; stroke: var(--purple); stroke-width: 1; opacity: 0.6; animation: vg-ring 5s ease-out infinite both; }
+@keyframes vg-approve { 0%, 52% { opacity: 0; transform: scale(0.4); } 58%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes vg-ring { 0%, 54% { opacity: 0; transform: scale(0.6); } 62% { opacity: 0.8; } 92%, 100% { opacity: 0; transform: scale(1.8); } }
+.vg-rise { fill: #a9a7ad; animation: vg-rise 4.5s var(--ease) infinite both; }
+@keyframes vg-rise { 0%, 4% { opacity: 0; transform: translateY(12px); } 16%, 90% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.vg-wave { fill: none; stroke: #e9e7ec; stroke-width: 1; opacity: 0.22; animation: vg-wave 2.1s ease-out infinite both; }
+@keyframes vg-wave { 0% { transform: scale(0.25); opacity: 0.85; } 100% { transform: scale(3.6); opacity: 0; } }
+.vg-dot { fill: #c9c7cc; animation: vg-dot 4.5s ease infinite both; }
+@keyframes vg-dot { 0%, 8% { opacity: 0.15; } 16%, 90% { opacity: 1; } 100% { opacity: 0.15; } }
+.vg-cell { animation: vg-cell 4s ease infinite both; }
+@keyframes vg-cell { 0%, 4% { opacity: 0.25; } 12%, 82% { opacity: 1; } 100% { opacity: 0.25; } }
+.vg-frame { fill: none; stroke: rgba(255, 255, 255, 0.16); stroke-width: 1; }
+.vg-link { stroke: #e9e7ec; stroke-width: 1; }
+.vg-check { fill: #e9e7ec; }
+.vg-origin { fill: var(--purple); }
 .ph-name { display: flex; align-items: baseline; gap: 10px; }
 .ph-name .now { margin-left: auto; color: var(--lavender); font-size: 9.5px; white-space: nowrap; }
 .phases .beat { margin-top: 6px; min-height: 2.7em; font-size: clamp(13px, 1.05vw, 15px); line-height: 1.3; opacity: 0; transition: opacity 0.35s; }
@@ -534,6 +574,15 @@ html.locked .scene > .wrap, html.locked .scene .side-note { visibility: hidden; 
 .never ul { display: flex; flex-direction: column; margin-top: 8px; }
 .never li { padding: 6px 0; border-top: 1px solid var(--line-soft); font-size: 14px; text-decoration: line-through; text-decoration-color: var(--purple); }
 .principle { font-size: 16px; }
+/* A7 · PMM loops */
+.plumbing ol { display: flex; flex-direction: column; margin-top: 8px; }
+.plumbing li { display: grid; grid-template-columns: 28px 1fr; gap: 8px; align-items: baseline; padding: 6px 0; border-top: 1px solid var(--line-soft); font-size: 14px; line-height: 1.4; }
+.plumbing li .lbl { color: var(--purple); }
+.never.guard li { text-decoration: none; }
+.never.guard li::before { content: "● "; color: var(--purple); font-size: 9px; vertical-align: 2px; }
+.react { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.loop-steps li:not(:last-child)::after { content: " →"; opacity: 0.6; }
+.tbl code { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.02em; padding: 1px 5px; background: rgba(13, 13, 16, 0.06); border-radius: 3px; white-space: nowrap; }
 
 /* ---------------------------------------------------------- responsive */
 @media (max-width: 1100px) {
@@ -575,7 +624,9 @@ html.locked .scene > .wrap, html.locked .scene .side-note { visibility: hidden; 
   .s01-sub { font-size: clamp(22px, 6.6vw, 40px); }
   .buyer { grid-template-columns: 28px 1fr; }
   .buyer .quote { grid-column: 2; }
-  .map { grid-template-columns: 1fr 1fr; padding-left: 0; }
+  .map { grid-template-columns: 1fr; row-gap: 6px; }
+  .map-k, .map-v { grid-column: 1; }
+  .map-k:not(:first-child) { margin-top: 8px; }
   .s06-head { flex-direction: column; }
   .s06-bottom { text-align: left; }
   .phases, .channels { grid-template-columns: 1fr 1fr; gap: 16px 14px; }
@@ -605,7 +656,7 @@ html.locked .scene > .wrap, html.locked .scene .side-note { visibility: hidden; 
 @media (max-height: 760px) and (min-width: 761px) {
   :root { --chrome-h: 54px; --dock-h: 48px; }
   .frame { padding-block: 18px 14px; gap: 12px; }
-  .map li { padding: 2px 0; }
+  .map li { padding: 3px 0; }
   .buyer { padding: 8px 0; }
 }
 

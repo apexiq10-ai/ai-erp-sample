@@ -1,10 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { a1, a2, a3, a4, a5, a6, appendixList, apxLabels as L, s07 } from "@/content";
+import { a1, a2, a3, a4, a5, a6, a7, appendixList, apxLabels as L, s07 } from "@/content";
 import { Frame, Mark, useDeck, useSection } from "@/components/ui";
 
-/* The appendix: six exhibits on warm paper, one screen that behaves like a
+/* The appendix: seven exhibits on warm paper, one screen that behaves like a
    deck. A bar across the top moves one page at a time. */
 
 type Apx = { title: string; headline: string; narrative: string[]; exhibit: string; implication: string };
@@ -275,7 +275,104 @@ function A6() {
   );
 }
 
-const PAGES = [A1, A2, A3, A4, A5, A6];
+/* A7 · PMM loops. The technical page: three loops on one event stream, and
+   the reactivation loop specified down to its trigger events. */
+function A7() {
+  return (
+    <Page
+      id="a7"
+      a={a7}
+      aside={
+        <>
+          <div className="plumbing">
+            <p className="lbl">{a7.plumbingLabel}</p>
+            <ol>
+              {a7.plumbing.map((x, k) => (
+                <li key={x}>
+                  <span className="lbl">{String(k + 1).padStart(2, "0")}</span>
+                  <span>{x}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="never guard">
+            <p className="lbl">{a7.guardrailsLabel}</p>
+            <ul>
+              {a7.guardrails.map((x) => (
+                <li key={x}>{x}</li>
+              ))}
+            </ul>
+          </div>
+          <Mark kind="hypothesis">{a7.hypothesis}</Mark>
+        </>
+      }
+    >
+      <div className="tbl-wrap">
+        <table className="tbl small loops">
+          <thead>
+            <tr>
+              {a7.loopCols.map((c) => (
+                <th key={c}>{c}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {a7.loops.map((l) => (
+              <tr key={l.name} className={l.name === a7.loops[2].name ? "us-row" : ""}>
+                <th>{l.name}</th>
+                <td>{l.reads}</td>
+                <td>{l.decides}</td>
+                <td>{l.does}</td>
+                <td className="mute">{l.owner}</td>
+                <td className="mute">{l.cadence}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="react">
+        <p className="lbl">{a7.reactivationLabel}</p>
+        <ol className="flow fast loop-steps">
+          {a7.steps.map((x) => (
+            <li key={x}>{x}</li>
+          ))}
+        </ol>
+      </div>
+      <div className="tbl-wrap">
+        <table className="tbl small triggers">
+          <thead>
+            <tr>
+              {a7.triggerCols.map((c) => (
+                <th key={c}>{c}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {a7.triggers.map((t) => (
+              <tr key={t.missing}>
+                <th>{t.stalled}</th>
+                <td>
+                  <code>{t.missing}</code>
+                </td>
+                <td className="mute">{t.after}</td>
+                <td>{t.reason}</td>
+                <td>{t.play}</td>
+                <td>
+                  <code>{t.success}</code>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="legend">
+        <Mark kind="illustrative">{a7.eventsNote}</Mark>
+      </div>
+    </Page>
+  );
+}
+
+const PAGES = [A1, A2, A3, A4, A5, A6, A7];
 
 export function Appendix() {
   const { step } = useSection();

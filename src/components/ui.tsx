@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useRef, useState, type ComponentType, type CSSProperties, type ElementType, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, type ComponentType, type CSSProperties, type ElementType, type ReactNode } from "react";
 import type { Mode } from "@/content";
 
 /* ------------------------------------------------------------ contexts */
@@ -189,52 +189,6 @@ export function Film({ name, play, className = "", style }: { name: string; play
         onError={(e) => ((e.currentTarget as HTMLVideoElement).style.visibility = "hidden")}
       />
     </div>
-  );
-}
-
-/* ---------------------------------------------------------- stage clip
-   A short Runway loop tied to one stage. It loads only when its stage is
-   selected (so it never blocks the page), plays only while that stage is
-   selected, on screen and motion is on, and otherwise holds its poster.
-   A rejected play() or a failed load leaves the poster in place. */
-
-export function StageClip({ name, active, visible, motion }: { name: string; active: boolean; visible: boolean; motion: boolean }) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const [failed, setFailed] = useState(false);
-  const [wanted, setWanted] = useState(false);
-  const run = active && visible && motion && !failed;
-  useEffect(() => {
-    if (active && visible) setWanted(true);
-  }, [active, visible]);
-  useEffect(() => {
-    const v = ref.current;
-    if (!v) return;
-    v.muted = true;
-    if (!run) {
-      v.pause();
-      return;
-    }
-    const start = () => {
-      if (document.hidden || !v.paused) return;
-      v.play()?.catch(() => {});
-    };
-    const onVis = () => (document.hidden ? v.pause() : start());
-    start();
-    v.addEventListener("canplay", start);
-    document.addEventListener("visibilitychange", onVis);
-    return () => {
-      v.removeEventListener("canplay", start);
-      document.removeEventListener("visibilitychange", onVis);
-    };
-    // `wanted` mounts the <video>; re-run once it exists.
-  }, [run, wanted]);
-  return (
-    <span className={`clip${run ? " playing" : ""}`} aria-hidden="true">
-      <img src={`/media/${name}.jpg`} alt="" loading="lazy" decoding="async" />
-      {wanted && !failed && (
-        <video ref={ref} src={`/media/${name}.mp4`} poster={`/media/${name}.jpg`} muted loop playsInline preload="auto" disablePictureInPicture tabIndex={-1} onError={() => setFailed(true)} />
-      )}
-    </span>
   );
 }
 

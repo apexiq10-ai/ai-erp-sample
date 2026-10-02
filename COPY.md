@@ -123,7 +123,7 @@ Claimed · every entry traced to its source, every agent action recorded, human 
 
 ## 05 · Buyers
 
-**Same ledger. / Different nightmares.**
+**Same ledger. / Different stakes.**
 
 Map labels: Who · What makes it hard · Trigger · How we say it
 
@@ -156,14 +156,14 @@ Persona map · hypothesis to validate
 | 03 | Launch | Turn receipts into a category. | CEO point of view · State of the Close · Recon keynote · Named customer voices · Seller readiness |
 | 04 | Scale | Surround the market. | Vertical playbooks · Partner co-marketing · Paid · Close Club · Lifecycle · Advocacy |
 
-Motion beats (one Runway loop per phase, plays while selected; label: Now playing):
+Motion beats (one code-built animation per phase, art key in the last column; it plays while selected; label: Now playing). No film footage on 06: the Runway films belong to 04 and 09.
 
 | Phase | Beat | Clip |
 | --- | --- | --- |
-| Harvest | Evidence is collected and organized. | stage-harvest |
-| Prove | The evidence connects into a reviewed, traceable workflow. | stage-prove |
-| Launch | The proof becomes a story the market can see. | stage-launch |
-| Scale | The workflow repeats across volume and entities. | stage-scale |
+| Harvest | Evidence is collected and organized. | harvest |
+| Prove | The evidence connects into a reviewed, traceable workflow. | prove |
+| Launch | The proof becomes a story the market can see. | launch |
+| Scale | The workflow repeats across volume and entities. | scale |
 
 **The receipts exist. Job one: collect them.**
 
@@ -422,6 +422,46 @@ Implication: **Start with one close. Earn each vertical the same way.**
 
 ---
 
+### A7 · PMM loops
+
+**Build loops, not campaigns. Start with the signups that went quiet.**
+
+A campaign ends. A loop reads a signal, makes a decision, acts, and learns from the answer, every cycle.
+
+Three loops share one event stream: segmentation, go-to-market and reactivation. Reactivation comes first. A dormant signup already raised its hand, and the product data shows exactly where it stopped.
+
+Rules first, models later. A rule an operator can read beats a score nobody can explain to a controller.
+
+Exhibit: Three loops, one event stream
+
+Plumbing: Product events and CRM activity land in the warehouse · Rules assign segment, stall point and reason to every account · A reverse sync writes them back to the CRM and the lifecycle tool · Every send, reply and session returns as an event
+
+| Loop | Reads | Decides | Does | Owner | Cadence |
+| --- | --- | --- | --- | --- | --- |
+| Segmentation | Incumbent ERP, entity count, billing model, funding stage, product events | Segment, fit tier and buying trigger | Routes the account to its message and play | PMM with RevOps | Weekly |
+| Go-to-market | Message tests, channel touches, stage velocity | Keep, change or stop each play | Shifts the play mix and budget | PMM with Demand | Monthly |
+| Reactivation | Where a signup stopped, and for how long | Why it stopped | Sends one matched play, timed to the close calendar | PMM with Lifecycle and Sales | Weekly |
+
+The reactivation loop: Detect · Diagnose · Act · Measure · Learn
+
+| Stalled at | Missing event | After | Likely reason | Matched play | Success event |
+| --- | --- | --- | --- | --- | --- |
+| Signed up | source_connected | 7 days | Integration effort | Integration walkthrough for Finance Systems | source_connected |
+| Sources connected | close_run | 14 days | No clear first step | Parallel Close scoping: bring your last close | parallel_close_start |
+| Close run | proposal_reviewed | 10 days | Trust in agent proposals | Auditor evidence package, Close Club peer session | proposal_reviewed |
+| Active, then quiet | session | Days 1 to 7 | Close week | Hold. State of the Close on day 10 | session |
+| Outside the core segments | fit_tier | At signup | Fit | Partner route and light nurture | partner_referral |
+
+Illustrative event names
+
+Guardrails: No outreach in close week · One play per account at a time · Every message cites an evidence asset, never a promise · A person owns every send to a controller
+
+Hypothesis · thresholds and plays are starting points, to be set and tested against Rillet product data.
+
+→ Build reactivation first: the signal already exists, and the buyer has already said yes once.
+
+---
+
 ## Talk track (about 950 spoken words, 12 minutes with clicks)
 
 Say "I would," not "Rillet will." Speak anything tagged Claimed as a claim. Deliver the edgy lines dry, once. Bracketed text is a click.
@@ -434,7 +474,7 @@ Say "I would," not "Rillet will." Speak anything tagged Claimed as a claim. Deli
 
 **04.** [Let the film run.] Heroics don't scale. Every finance team has pulled the heroic close: a strong controller, a long weekend, a lot of coffee. Triple the volume and the heroics run out. Ledgers don't. [Explore the evidence; trace each layer.] One number. Its entries. The real events underneath. The agent's proposal. The person who signed. Every number, all the way down. That chain is what the auditor wants to see.
 
-**05.** Same ledger, different nightmares. The controller wants the last week of the month back; the trigger is a close that slips past day ten. The CFO won't hire to keep up; the trigger is a fundraise, an IPO plan or next year's hiring plan. The CAO won't sign what can't be traced; the trigger is a first Big Four audit or SOX. Finance Systems is done babysitting middleware; the trigger is a renewal or an integration that breaks mid-close. Behind all four sits the auditor, who permits the switch.
+**05.** Same ledger, different stakes. The controller wants the last week of the month back; the trigger is a close that slips past day ten. The CFO won't hire to keep up; the trigger is a fundraise, an IPO plan or next year's hiring plan. The CAO won't sign what can't be traced; the trigger is a first Big Four audit or SOX. Finance Systems is done babysitting middleware; the trigger is a renewal or an integration that breaks mid-close. Behind all four sits the auditor, who permits the switch.
 
 **06.** Rillet isn't a new product looking for proof; it has more than 600 customers. The receipts exist. Harvest: baseline 20 to 30 closes. Prove: the Parallel Close, their last close on our ledger. Launch: turn receipts into a category. Scale: surround the market. Internally, Product owns the evidence chain, Sales and Implementation run the Parallel Close, the CEO carries the category story, Legal reviews every claim.
 

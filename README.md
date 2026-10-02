@@ -63,7 +63,7 @@ It fails on any on-screen string missing from `COPY.md`, any em or en dash, and 
 
 ## Media
 
-`public/media/` holds the two packaged Runway films and their poster frames, plus four 06 stage loops cut from them (`npm run media` re-cuts them). Keep everything local. To swap a film, replace the `.mp4` and its `-poster.jpg` with the same name. `reference/runway-kit/` keeps the original drop-in scene trio and its notes.
+`public/media/` holds the two packaged Runway films and their poster frames, nothing else: the films belong to 04 and 09 only. The 06 phase animations are code-built (`src/components/sections/Vignettes.tsx`). Keep everything local. To swap a film, replace the `.mp4` and its `-poster.jpg` with the same name. `reference/runway-kit/` keeps the original drop-in scene trio and its notes.
 
 ## Architecture
 
@@ -78,13 +78,13 @@ src/components/sections/Main.tsx     01 to 03, 05 to 08 (3D slides)
 src/components/sections/Proof.tsx    Source / Entry / Close, the trace panel and its markers (one shared state)
 src/components/proof/model.ts        the proof steps, views and reducer
 src/components/sections/Scenes.tsx   04 and 09 (Runway films + detail layers)
-src/components/sections/Appendix.tsx A1 to A6
+src/components/sections/Vignettes.tsx the four 06 phase animations (code-built SVG)
+src/components/sections/Appendix.tsx A1 to A7
 src/components/world/formations.ts   where each of 900 entries sits, per slide and build; framing; camera
 src/components/world/World.tsx       the three.js scene: one render loop, camera, light, picking, hotspots
 src/components/world/interaction.ts  01 progress and 03 layer contracts (pure, tested)
 src/components/world/store.ts        shared state between the page and the scene
 scripts/check-copy.mjs           copy, dash and claim discipline check
-scripts/encode-stage-clips.mjs   cuts the 06 stage loops from the Runway films
 tests/proof.test.mjs             reducer tests
 tests/interaction.test.mjs       01 progress, hysteresis, easing; 03 layer identity
 ```

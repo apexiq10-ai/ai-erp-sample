@@ -45,6 +45,7 @@ for (const raw of strings) {
 const BANNED = [
   /audit[- ]ready/i, /audit[- ]proof/i, /zero[- ]day close/i, /autonomous accounting/i, /no accountants needed/i,
   /replace (your|the) accounting team/i, /ai[- ]powered/i, /seamless/i, /superintelligence/i, /\bharness\b/i,
+  /nightmare/i, // never in our marketing
 ];
 const ALLOW = [/never: \[/, /is the direction, not the promise/, /BANNED|ALLOW/];
 const dashHits = [];
@@ -67,9 +68,14 @@ const scan = (dir) => {
 };
 scan(path.join(root, "src"));
 if (/[—–]/.test(deck)) dashHits.push("COPY.md");
+// Words that must never reach our marketing, anywhere: deck, source or page.
+const NEVER = [/nightmare/i];
+const neverIn = (label, text) => NEVER.forEach((w) => w.test(text) && claimHits.push(`${label} (${w.source})`));
+neverIn("COPY.md", deck);
 if (existsSync(path.join(root, "out/index.html"))) {
   const html = readFileSync(path.join(root, "out/index.html"), "utf8").replace(/<script[\s\S]*?<\/script>/g, "");
   if (/[—–]/.test(html)) dashHits.push("out/index.html (rendered markup)");
+  neverIn("out/index.html", html);
 }
 
 console.log(`Checked ${strings.length} strings from content.ts against COPY.md.`);
