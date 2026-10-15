@@ -142,8 +142,8 @@ export const s03 = {
 
 export const s04 = {
   topline: "The product insight",
-  title: ["Heroics", "don't scale.", "Ledgers do."],
-  support: "A fast close once is a long weekend. At three times the volume, it takes infrastructure.",
+  title: ["All-nighters", "don't scale.", "Ledgers do."],
+  support: "One fast close takes a long weekend. Three times the volume takes infrastructure.",
   explore: ["Explore the", "evidence"],
   side: "Fig. 04 / Every number, all the way down",
   tag: "Illustrative motion · not product footage",
@@ -574,7 +574,7 @@ export const sections: SectionMeta[] = [
   { id: "s01", index: "01", subject: "Hindsight", part: "main", steps: 1, modes: ["night"], read: 0 },
   { id: "s02", index: "02", subject: "Meet the AI-native ERP", part: "main", steps: 2, modes: ["night"], read: 0, scrub: true },
   { id: "s03", index: "03", subject: "The wedge", part: "main", steps: 5, modes: ["night"], read: 0 },
-  { id: "s04", index: "04", subject: "Heroics don't scale", part: "main", steps: 0, modes: ["night"], read: 0 },
+  { id: "s04", index: "04", subject: "All-nighters don't scale", part: "main", steps: 0, modes: ["night"], read: 0 },
   { id: "s05", index: "05", subject: "Buyers", part: "main", steps: 5, modes: ["night"], read: 5 },
   { id: "s06", index: "06", subject: "Sequence", part: "main", steps: 4, modes: ["night"], read: 4 },
   { id: "s07", index: "07", subject: "Channels", part: "main", steps: 3, modes: ["night"], read: 1 },

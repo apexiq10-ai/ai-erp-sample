@@ -29,7 +29,7 @@ Voice: written for a controller who has tied out a close at 2 a.m. Dry, specific
 | 02 | Every number shows its work: source, reasoning, approver. | **Source, reasoning, approver. On every number.** |
 | 03 | Rillet doesn't replace the accountant. It retires the archaeology. | **We retire the archaeology, not the accountant.** |
 | 03 | Agents code, accrue, allocate and recognize as entries arrive. Under your policies, not theirs. | **Coded, accrued, allocated and recognized as entries land. Your policies, not ours.** |
-| 04 | A fast close at three times the volume is infrastructure. | **A fast close once is a long weekend. At three times the volume, it takes infrastructure.** |
+| 04 | A fast close at three times the volume is infrastructure. | **One fast close takes a long weekend. Three times the volume takes infrastructure.** |
 | 06 | The receipts already exist. Marketing's first job is to collect them. | **The receipts exist. Job one: collect them.** |
 | 07 | Be everywhere a controller looks. Except during close week. | **Everywhere a controller looks. Except close week.** *Days 1 to 7: radio silence.* |
 | 08 | Reach says they heard of Rillet. Behavior says the close changed. | **Reach says they heard of us. Behavior says the close changed.** |
@@ -56,7 +56,7 @@ Route: problem → value → wedge → proof chain → buyers → sequence → c
 | 01 | Hindsight | Code 3D: 900 entries stream across the month | **Freeze the month** collapses them into a month-end ridge; drag to turn |
 | 02 | Meet Rillet | Code 3D: the current ledger, five source towers, a posting cursor, the reported line | **Connect / Reason / Prove** is scroll-driven (three viewports, pinned frame, one active stage drives label, caption and scene). **Source / Entry / Close** tabs inspect one entry. **Trace an entry** (or click any entry) re-forms the ledger into five layers with marker buttons: source event → accounting logic → journal entry → human review → reporting result |
 | 03 | The wedge | Code 3D: seven manual layers float over the ledger as a dig | Each stage lowers the layers it takes on into the ledger; sign-off lands last with the approval point |
-| 04 | Heroics don't scale | **Runway**: the ledger monolith | **Explore the evidence**: descend five layers under one illustrative number |
+| 04 | All-nighters don't scale | **Runway**: the ledger monolith | **Explore the evidence**: descend five layers under one illustrative number |
 | 05 | Buyers | Code 3D: same ledger, four vantage points | Each buyer's map opens while the camera moves to their view |
 | 06 | Sequence | Code 3D band plus a **Runway loop per phase** | Phases sit under the headline. Selecting one plays its clip, shows its beat caption and lights its platform: Harvest (loose evidence collected into piles), Prove (a second ledger assembles in registration, a review point lights), Launch (the tower), Scale (rings repeat outward) |
 | 07 | Channels | Code 3D: a 30-day calendar ring; close week flattened; 15 play beacons | Phase tabs light 6, 12, 15 plays |
@@ -79,7 +79,7 @@ Art direction follows Colossal's composition and pacing (full-bleed media, monum
 
 | Asset | Source | Treatment |
 | --- | --- | --- |
-| `heroics-ledger-monolith.mp4` | Runway task `98290f42…` (10 s, 1920×1080, silent) | Full bleed on 04, slight greyscale and contrast, left-weighted gradient; pans with the pointer; descends as the viewer traces layers |
+| `ledger-monolith.mp4` | Runway task `98290f42…` (10 s, 1920×1080, silent) | Full bleed on 04, slight greyscale and contrast, left-weighted gradient; pans with the pointer; descends as the viewer traces layers |
 | `bring-your-last-close.mp4` | Runway task `61f13fb4…` (10 s, reframed to remove a pseudo-label) | Full bleed on 09 with a stronger left gradient |
 | Posters (`*-poster.jpg`) | Frames from each film | Loading, reduced-motion and failure state |
 | 06 phase animations (Harvest, Prove, Launch, Scale) | Code-built SVG in `Vignettes.tsx`; no film footage, so the 04 and 09 films are never repeated | 06 phase cards. Run only while their phase is selected, on screen and motion is on; otherwise, and under reduced motion, they rest on the finished frame |

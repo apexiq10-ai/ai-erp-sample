@@ -93,13 +93,13 @@ Card rows: What it is · What happened · Why it matters
 
 Inference · step mapping · Claimed · capability as described by the company
 
-## 04 · Heroics don't scale (Runway scene)
+## 04 · All-nighters don't scale (Runway scene)
 
 The product insight
 
-**HEROICS / DON'T SCALE. / LEDGERS DO.**
+**ALL-NIGHTERS / DON'T SCALE. / LEDGERS DO.**
 
-A fast close once is a long weekend. At three times the volume, it takes infrastructure.
+One fast close takes a long weekend. Three times the volume takes infrastructure.
 
 Action: Explore the / evidence
 Side note: Fig. 04 / Every number, all the way down
@@ -472,7 +472,7 @@ Say "I would," not "we will." Speak anything tagged Claimed as a claim. Deliver 
 
 **03.** Where I'd start: one close. Today the team exports, matches, accrues, allocates, recognizes, eliminates and ties out. That isn't accounting. It's archaeology. Follow one entry up the stack. [Source event: captured as it lands.] [Accounting logic: your policies.] [Journal entry: matched on arrival.] [Slow down. Human review.] And the controller still signs. We retire the archaeology, not the accountant. [Reporting result: the close confirms.]
 
-**04.** [Let the film run.] Heroics don't scale. Every finance team has pulled the heroic close: a strong controller, a long weekend, a lot of coffee. Triple the volume and the heroics run out. Ledgers don't. [Explore the evidence; trace each layer.] One number. Its entries. The real events underneath. The agent's proposal. The person who signed. Every number, all the way down. That chain is what the auditor wants to see.
+**04.** [Let the film run.] All-nighters don't scale. Every finance team has pulled the all-nighter close: a strong controller, a long weekend, a lot of coffee. Triple the volume and the all-nighters run out. Ledgers don't. [Explore the evidence; trace each layer.] One number. Its entries. The real events underneath. The agent's proposal. The person who signed. Every number, all the way down. That chain is what the auditor wants to see.
 
 **05.** Same ledger, different stakes. The controller wants the last week of the month back; the trigger is a close that slips past day ten. The CFO won't hire to keep up; the trigger is a fundraise, an IPO plan or next year's hiring plan. The CAO won't sign what can't be traced; the trigger is a first Big Four audit or SOX. Finance Systems is done babysitting middleware; the trigger is a renewal or an integration that breaks mid-close. Behind all four sits the auditor, who permits the switch.
 
