@@ -812,10 +812,10 @@ function Scene({ section, step, motion, hidden, turnable, labels, labelEls, proo
     }
     if (process.env.NODE_ENV !== "production") {
       // dev only: what this state draws (links, travelling signals, review points)
-      (window as unknown as { __rilletStats?: object }).__rilletStats = { links: ns, signals: np, points: nv };
-      const w = window as unknown as { __rilletMs?: number[] };
-      (w.__rilletMs ??= []).push(performance.now() - t0);
-      if (w.__rilletMs.length > 120) w.__rilletMs.shift();
+      (window as unknown as { __erpStats?: object }).__erpStats = { links: ns, signals: np, points: nv };
+      const w = window as unknown as { __erpMs?: number[] };
+      (w.__erpMs ??= []).push(performance.now() - t0);
+      if (w.__erpMs.length > 120) w.__erpMs.shift();
     }
   });
 
@@ -948,7 +948,7 @@ export default function World({ section, step, motion, reduced, hidden }: { sect
   const [awake, setAwake] = useState(false);
   useEffect(() => {
     if (process.env.NODE_ENV === "production") return;
-    (window as unknown as { __rillet: typeof TUNE }).__rillet = TUNE;
+    (window as unknown as { __erp: typeof TUNE }).__erp = TUNE;
     (window as unknown as { __advance: typeof advance }).__advance = advance;
     setAwake(new URLSearchParams(window.location.search).has("awake"));
   }, []);

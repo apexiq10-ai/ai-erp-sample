@@ -712,7 +712,7 @@ function stateTrust08(i: number, t: number, o: Out) {
 
 export type Place = { s: number; x: number; z: number };
 
-// Dev-only live tuning: window.__rillet.place.s02 = {...}, .pose["s02:3"] = {...}
+// Dev-only live tuning: window.__erp.place.s02 = {...}, .pose["s02:3"] = {...}
 export const TUNE: { place: Record<string, Place>; pose: Record<string, Pose> } = { place: {}, pose: {} };
 
 export function place(section: string, tracing = false): Place {

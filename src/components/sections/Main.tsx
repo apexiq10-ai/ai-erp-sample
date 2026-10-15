@@ -119,7 +119,7 @@ export function S01() {
   );
 }
 
-/* 02 · MEET RILLET -------------------------------------------------------
+/* 02 · MEET THE ERP ------------------------------------------------------
    Three viewports of scroll, one pinned frame. One active stage (the deck's
    build for 02) drives the stage label, its caption and the 3D scene; the
    viewport under the centre line sets it while scrolling, keys and clicks

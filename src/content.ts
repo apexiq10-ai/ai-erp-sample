@@ -19,9 +19,9 @@ export type SectionMeta = {
 /* ------------------------------------------------------------ SITE */
 
 export const site = {
-  name: "Rillet",
-  title: "Rillet · The ledger that shows its work.",
-  description: "Your company runs in real time. Your ERP runs on hindsight. A go-to-market plan for Rillet.",
+  name: "AI-native ERP",
+  title: "AI-native ERP · The ledger that shows its work.",
+  description: "Your company runs in real time. Your ERP runs on hindsight. A go-to-market plan for an AI-native ERP.",
   author: "A plan by Arthur Suvorov",
   system: "System of proof",
   note: "An independent PMM concept",
@@ -52,7 +52,7 @@ export const s01 = {
 /* ------------------------------------------------------------ 02 PRODUCT */
 
 export const s02 = {
-  meet: "Meet Rillet.",
+  meet: "Meet the AI-native ERP.",
   title: ["The ledger that", "shows its work."],
   sub: "Event in. Evidence out.",
   // One shared active stage drives the label, the caption and the scene.
@@ -62,7 +62,7 @@ export const s02 = {
     { word: "Prove", line: "Source, reasoning, approver. On every number.", caption: "Source, entry, review and reported result become inspectable." },
   ],
   stagesLabel: "How it works",
-  annotation: "Reason is where Aura works.",
+  annotation: "Reason is where the agents work.",
   hint: "Click any entry. It shows its work.",
   trace: "Trace an entry",
   sources: ["Billing", "Bank", "Payroll", "CRM", "Usage"],
@@ -135,7 +135,7 @@ export const s03 = {
     { happened: "The controller still signs.", why: "We retire the archaeology, not the accountant.", takes: ["Controller sign-off"] },
     { happened: "Schedules and flux explanations arrive drafted. Evidence attached.", why: "The close confirms. It doesn't reconstruct.", takes: ["Tie out"] },
   ] as { happened: string; why: string; takes: string[] }[],
-  tags: ["Inference · step mapping", "Claimed · capability as described by Rillet"],
+  tags: ["Inference · step mapping", "Claimed · capability as described by the company"],
 };
 
 /* ------------------------------------------------------------ 04 INSIGHT */
@@ -206,7 +206,7 @@ export const s05 = {
       buys: "Buys fewer seams.",
       hard: ["Scripts between billing, CRM, banks and the GL", "Every integration is a control to test", "Security review for anything with AI in it"],
       trigger: ["An ERP renewal", "An integration breaks mid-close", "A billing or CRM migration"],
-      say: ["Native integrations replace middleware", "One data model for people and agents", "Aura connects to Salesforce, Snowflake and Claude"],
+      say: ["Native integrations replace middleware", "One data model for people and agents", "Agents connect to Salesforce, Snowflake and Claude"],
       claimedSay: 2,
     },
   ],
@@ -269,7 +269,7 @@ export const s08 = {
   title: ["Impressions don't", "close the books."],
   title2: "Behavior does.",
   channels: [
-    { name: "Use", q: "Are they running the books in Rillet?", items: ["Active finance users", "Agent actions per close", "Workflows run by agents"] },
+    { name: "Use", q: "Are they running the books in the AI-native ERP?", items: ["Active finance users", "Agent actions per close", "Workflows run by agents"] },
     { name: "Value", q: "Did the close actually change?", items: ["Days to close", "Hours per close", "Manual journal entries", "Reconciling items"] },
     { name: "Trust", q: "Do they trust it enough to sign?", items: ["Proposals accepted, edited, rejected", "Post-close adjustments", "Auditor request turnaround"] },
     { name: "Commercial", q: "Does it move pipeline and revenue?", items: ["Parallel Close starts", "Conversion to contract", "Win rate by incumbent", "Cycle time", "Expansion"] },
@@ -301,14 +301,14 @@ export const s09 = {
     label: "09 / The Parallel Close",
     close: "Close",
     head: ["Your close.", "Our ledger.", "One test."],
-    note: "Proposed evaluation motion, subject to Rillet approval.",
+    note: "Proposed evaluation motion, subject to company approval.",
     next: "Next step",
     again: "Start again",
-    lanes: ["Your signed close", "Rillet replay"],
+    lanes: ["Your signed close", "AI-native ERP replay"],
     steps: [
       { short: "Scope", kicker: "01 / Scope", title: "Agree on the test.", detail: "Choose a signed period, a controller sponsor, the inputs, and the definition of a successful tie-out." },
       { short: "Replay", kicker: "02 / Replay", title: "Run it beside them.", detail: "Process the agreed period in parallel. Keep the original close untouched." },
-      { short: "Tie out", kicker: "03 / Tie out", title: "Compare the numbers.", detail: "Put Rillet output next to the signed close. Record differences, exceptions, and time spent." },
+      { short: "Tie out", kicker: "03 / Tie out", title: "Compare the numbers.", detail: "Put AI-native ERP output next to the signed close. Record differences, exceptions, and time spent." },
       { short: "Decide", kicker: "04 / Decide", title: "Let proof decide.", detail: "Review the evidence with finance and the auditor. The controller makes the call." },
     ],
   },
@@ -330,11 +330,11 @@ export const a1: Apx & {
   headline: "AI-native is table stakes. Win on proof at the customer's complexity.",
   narrative: [
     "Every ERP now ships an assistant. AI in the product no longer separates anyone.",
-    "What still separates Rillet is architecture: agents inside a real-time ledger, and an evidence chain that never crosses a seam.",
+    "What still separates this AI-native ERP is architecture: agents inside a real-time ledger, and an evidence chain that never crosses a seam.",
     "The hard objection: why replace the ERP at all? Because every seam between a ledger and the tools around it is a gap your auditor has to test.",
   ],
   exhibit: "Capability by architecture",
-  cols: ["Capability", "Legacy ERP + AI", "AI layer on an ERP", "Other AI-native ERPs", "Rillet"],
+  cols: ["Capability", "Legacy ERP + AI", "AI layer on an ERP", "Other AI-native ERPs", "This AI-native ERP"],
   rows: [
     { cap: "Conversational assistant", v: ["Vendor-announced", "Yes", "Claimed", "Claimed"] },
     { cap: "Agents assist with close tasks", v: ["Vendor-announced", "Core offer", "Claimed", "Claimed"] },
@@ -360,7 +360,7 @@ export const a2: Apx & {
   headline: "The close is the fastest way to prove value and earn the rest of finance.",
   narrative: [
     "Frequent, measured, and signed by a named person.",
-    "Rillet proves itself on the customer's own numbers without asking anyone to hand judgment to an agent. Revenue recognition, consolidation and reporting follow once the close is trusted.",
+    "This AI-native ERP proves itself on the customer's own numbers without asking anyone to hand judgment to an agent. Revenue recognition, consolidation and reporting follow once the close is trusted.",
   ],
   exhibit: "Expansion potential against ease of proof",
   workflows: [
@@ -383,11 +383,11 @@ export const a2: Apx & {
     { order: "Lead", seg: "Pre-IPO and public, leaving NetSuite, Sage or Oracle", why: "Trigger-rich, highest contract value", proof: "Public-company references (Claimed)" },
     { order: "Harvest", seg: "Healthcare and biotech", why: "Traction exists; turn it into named proof", proof: "Function Health (Claimed)" },
     { order: "Open", seg: "Fintech", why: "Highest reconstruction cost", proof: "Hypothesis" },
-    { order: "Follow", seg: "Logistics, robotics, defense, services", why: "Named by Rillet", proof: "Emerging" },
+    { order: "Follow", seg: "Logistics, robotics, defense, services", why: "Named by the company", proof: "Emerging" },
   ],
   pathLabel: "Start with one close. Then earn the rest of finance.",
   path: ["Month-end close", "Revenue recognition", "Consolidation", "Board reporting", "Audit", "IPO"],
-  implication: "Start where Rillet can earn the right to expand.",
+  implication: "Start where an AI-native ERP can earn the right to expand.",
 };
 
 export const a3: Apx & {
@@ -431,12 +431,12 @@ export const a4: Apx & {
   title: "Parallel Close economics",
   headline: "Run their last close. Tie it to the numbers they already signed.",
   narrative: [
-    "The prospect picks its last closed month. Rillet connects the sources, runs that close and ties it out to the results the controller already signed.",
+    "The prospect picks its last closed month. The AI-native ERP connects the sources, runs that close and ties it out to the results the controller already signed.",
     "The test isn't speed. It's whether the team reaches the same signed numbers with far less reconstruction, and trusts it enough to do it again.",
   ],
   exhibit: "One close, measured four ways",
   today: ["Export", "Match", "Accrue", "Allocate", "Recognize", "Eliminate", "Tie out", "Sign-off"],
-  parallel: ["Rillet continuous close", "Sign-off"],
+  parallel: ["AI-native continuous close", "Sign-off"],
   metrics: [
     { name: "Efficiency", items: ["Days to close", "Hours per close", "Manual journal entries"] },
     { name: "Quality", items: ["Tie-out variance to signed numbers", "Reconciling items", "Post-close adjustments"] },
@@ -555,7 +555,7 @@ export const a7: Apx & {
   eventsNote: "Illustrative event names",
   guardrailsLabel: "Guardrails",
   guardrails: ["No outreach in close week", "One play per account at a time", "Every message cites an evidence asset, never a promise", "A person owns every send to a controller"],
-  hypothesis: "Hypothesis · thresholds and plays are starting points, to be set and tested against Rillet product data.",
+  hypothesis: "Hypothesis · thresholds and plays are starting points, to be set and tested against product data.",
   implication: "Build reactivation first: the signal already exists, and the buyer has already said yes once.",
 };
 
@@ -572,7 +572,7 @@ export const appendixList = [a1, a2, a3, a4, a5, a6, a7].map((a, k) => ({
 
 export const sections: SectionMeta[] = [
   { id: "s01", index: "01", subject: "Hindsight", part: "main", steps: 1, modes: ["night"], read: 0 },
-  { id: "s02", index: "02", subject: "Meet Rillet", part: "main", steps: 2, modes: ["night"], read: 0, scrub: true },
+  { id: "s02", index: "02", subject: "Meet the AI-native ERP", part: "main", steps: 2, modes: ["night"], read: 0, scrub: true },
   { id: "s03", index: "03", subject: "The wedge", part: "main", steps: 5, modes: ["night"], read: 0 },
   { id: "s04", index: "04", subject: "Heroics don't scale", part: "main", steps: 0, modes: ["night"], read: 0 },
   { id: "s05", index: "05", subject: "Buyers", part: "main", steps: 5, modes: ["night"], read: 5 },

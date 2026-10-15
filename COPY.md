@@ -1,12 +1,12 @@
-# Rillet · The ledger that shows its work.
+# AI-native ERP · The ledger that shows its work.
 
 The approved copy deck. Every on-screen string in `src/content.ts` must appear here verbatim; `npm run check:copy` enforces it, along with the no-dash rule and the claim discipline (see the end of this file). Change wording here first, then in `content.ts`.
 
 Voice: written for a controller who has tied out a close at 2 a.m. Dry, specific, a little dangerous. Mock the process, never the profession.
 
-Site: Rillet · The ledger that shows its work. A plan by Arthur Suvorov. Your company runs in real time. Your ERP runs on hindsight. A go-to-market plan for Rillet.
+Site: AI-native ERP · The ledger that shows its work. A plan by Arthur Suvorov. Your company runs in real time. Your ERP runs on hindsight. A go-to-market plan for an AI-native ERP.
 
-Chrome: Rillet · System of proof · An independent PMM concept · Motion · On · Off · Index · The story · Scroll · swipe · arrow keys · The ledger that shows its work
+Chrome: AI-native ERP · System of proof · An independent PMM concept · Motion · On · Off · Index · The story · Scroll · swipe · arrow keys · The ledger that shows its work
 
 ---
 
@@ -25,9 +25,9 @@ Month slider (keyboard and touch equivalent): Close the month · Real time · Hi
 
 System: Press → or scroll · Day · Illustrative motion · not ledger data
 
-## 02 · Meet Rillet
+## 02 · Meet the AI-native ERP
 
-Meet Rillet.
+Meet the AI-native ERP.
 **The ledger that / shows its work.**
 Event in. Evidence out.
 
@@ -39,7 +39,7 @@ One active stage (scroll or keys) drives the label, the caption and the scene. G
 | 02 | Reason | Agents do the digging. Once. | Accounting logic processes the event and proposes an entry. |
 | 03 | Prove | Source, reasoning, approver. On every number. | Source, entry, review and reported result become inspectable. |
 
-Annotation: Reason is where Aura works.
+Annotation: Reason is where the agents work.
 Interaction: Click any entry. It shows its work. · Trace an entry
 Source towers: Billing · Bank · Payroll · CRM · Usage
 
@@ -91,7 +91,7 @@ Card rows: What it is · What happened · Why it matters
 | 04 | Human review | The controller still signs. | We retire the archaeology, not the accountant. | Controller sign-off |
 | 05 | Reporting result | Schedules and flux explanations arrive drafted. Evidence attached. | The close confirms. It doesn't reconstruct. | Tie out |
 
-Inference · step mapping · Claimed · capability as described by Rillet
+Inference · step mapping · Claimed · capability as described by the company
 
 ## 04 · Heroics don't scale (Runway scene)
 
@@ -140,7 +140,7 @@ Map labels: Who · What makes it hard · Trigger · How we say it
 
 **Chief Accounting Officer.** Hard: Usage and multi-element revenue under ASC 606 · Explaining every number to the auditor · SOX on a stack held together by spreadsheets. Trigger: A first Big Four audit · SOX readiness · A new pricing model. Say: Every number traces to source, policy and approver · Agents follow your documented policies · Your auditor gets something to test.
 
-**Finance Systems.** Hard: Scripts between billing, CRM, banks and the GL · Every integration is a control to test · Security review for anything with AI in it. Trigger: An ERP renewal · An integration breaks mid-close · A billing or CRM migration. Say: Native integrations replace middleware · One data model for people and agents · Aura connects to Salesforce, Snowflake and Claude (Claimed).
+**Finance Systems.** Hard: Scripts between billing, CRM, banks and the GL · Every integration is a control to test · Security review for anything with AI in it. Trigger: An ERP renewal · An integration breaks mid-close · A billing or CRM migration. Say: Native integrations replace middleware · One data model for people and agents · Agents connect to Salesforce, Snowflake and Claude (Claimed).
 
 **One ledger. Four reasons to switch.**
 Persona map · hypothesis to validate
@@ -201,7 +201,7 @@ Buying-journey module: a stage rail (Recognize to Expand), then one detail area 
 
 | Channel | Question | Metrics |
 | --- | --- | --- |
-| Use | Are they running the books in Rillet? | Active finance users · Agent actions per close · Workflows run by agents |
+| Use | Are they running the books in the AI-native ERP? | Active finance users · Agent actions per close · Workflows run by agents |
 | Value | Did the close actually change? | Days to close · Hours per close · Manual journal entries · Reconciling items |
 | Trust | Do they trust it enough to sign? | Proposals accepted, edited, rejected · Post-close adjustments · Auditor request turnaround |
 | Commercial | Does it move pipeline and revenue? | Parallel Close starts · Conversion to contract · Win rate by incumbent · Cycle time · Expansion |
@@ -236,15 +236,15 @@ Tag: Illustrative motion · not product footage
 **Parallel Close layer** (09 / The Parallel Close · Close)
 
 **Your close. / Our ledger. / One test.**
-Proposed evaluation motion, subject to Rillet approval.
+Proposed evaluation motion, subject to company approval.
 Next step · Start again
-Lanes: Your signed close · Rillet replay
+Lanes: Your signed close · AI-native ERP replay
 
 | Short | Kicker | Title | Detail |
 | --- | --- | --- | --- |
 | Scope | 01 / Scope | Agree on the test. | Choose a signed period, a controller sponsor, the inputs, and the definition of a successful tie-out. |
 | Replay | 02 / Replay | Run it beside them. | Process the agreed period in parallel. Keep the original close untouched. |
-| Tie out | 03 / Tie out | Compare the numbers. | Put Rillet output next to the signed close. Record differences, exceptions, and time spent. |
+| Tie out | 03 / Tie out | Compare the numbers. | Put AI-native ERP output next to the signed close. Record differences, exceptions, and time spent. |
 | Decide | 04 / Decide | Let proof decide. | Review the evidence with finance and the auditor. The controller makes the call. |
 
 Appendix · The ledger that shows its work.
@@ -261,13 +261,13 @@ Navigation: Previous · Next · Exhibit · Expansion · Ease of proof
 
 Every ERP now ships an assistant. AI in the product no longer separates anyone.
 
-What still separates Rillet is architecture: agents inside a real-time ledger, and an evidence chain that never crosses a seam.
+What still separates this AI-native ERP is architecture: agents inside a real-time ledger, and an evidence chain that never crosses a seam.
 
 The hard objection: why replace the ERP at all? Because every seam between a ledger and the tools around it is a gap your auditor has to test.
 
 Exhibit: Capability by architecture
 
-| Capability | Legacy ERP + AI | AI layer on an ERP | Other AI-native ERPs | Rillet |
+| Capability | Legacy ERP + AI | AI layer on an ERP | Other AI-native ERPs | This AI-native ERP |
 | --- | --- | --- | --- | --- |
 | Conversational assistant | Vendor-announced | Yes | Claimed | Claimed |
 | Agents assist with close tasks | Vendor-announced | Core offer | Claimed | Claimed |
@@ -290,7 +290,7 @@ Source note: Public materials reviewed October 2026. Column three: Campfire, Dua
 
 Frequent, measured, and signed by a named person.
 
-Rillet proves itself on the customer's own numbers without asking anyone to hand judgment to an agent. Revenue recognition, consolidation and reporting follow once the close is trusted.
+This AI-native ERP proves itself on the customer's own numbers without asking anyone to hand judgment to an agent. Revenue recognition, consolidation and reporting follow once the close is trusted.
 
 Exhibit: Expansion potential against ease of proof
 
@@ -317,12 +317,12 @@ Exhibit: Expansion potential against ease of proof
 | Lead | Pre-IPO and public, leaving NetSuite, Sage or Oracle | Trigger-rich, highest contract value | Public-company references (Claimed) |
 | Harvest | Healthcare and biotech | Traction exists; turn it into named proof | Function Health (Claimed) |
 | Open | Fintech | Highest reconstruction cost | Hypothesis |
-| Follow | Logistics, robotics, defense, services | Named by Rillet | Emerging |
+| Follow | Logistics, robotics, defense, services | Named by the company | Emerging |
 
 Start with one close. Then earn the rest of finance.
 Month-end close → Revenue recognition → Consolidation → Board reporting → Audit → IPO
 
-Implication: **Start where Rillet can earn the right to expand.**
+Implication: **Start where an AI-native ERP can earn the right to expand.**
 
 ### A3 · The ERP buying system
 
@@ -346,14 +346,14 @@ Implication: **Enthusiasm without auditor comfort buys evaluations, not migratio
 
 **Run their last close. Tie it to the numbers they already signed.**
 
-The prospect picks its last closed month. Rillet connects the sources, runs that close and ties it out to the results the controller already signed.
+The prospect picks its last closed month. The AI-native ERP connects the sources, runs that close and ties it out to the results the controller already signed.
 
 The test isn't speed. It's whether the team reaches the same signed numbers with far less reconstruction, and trusts it enough to do it again.
 
 Exhibit: One close, measured four ways
 
 Current state: Export · Match · Accrue · Allocate · Recognize · Eliminate · Tie out · Sign-off
-Parallel Close: Rillet continuous close · Sign-off
+Parallel Close: AI-native continuous close · Sign-off
 
 | Efficiency | Quality | Trust | Adoption |
 | --- | --- | --- | --- |
@@ -456,7 +456,7 @@ Illustrative event names
 
 Guardrails: No outreach in close week · One play per account at a time · Every message cites an evidence asset, never a promise · A person owns every send to a controller
 
-Hypothesis · thresholds and plays are starting points, to be set and tested against Rillet product data.
+Hypothesis · thresholds and plays are starting points, to be set and tested against product data.
 
 → Build reactivation first: the signal already exists, and the buyer has already said yes once.
 
@@ -464,11 +464,11 @@ Hypothesis · thresholds and plays are starting points, to be set and tested aga
 
 ## Talk track (about 950 spoken words, 12 minutes with clicks)
 
-Say "I would," not "Rillet will." Speak anything tagged Claimed as a claim. Deliver the edgy lines dry, once. Bracketed text is a click.
+Say "I would," not "we will." Speak anything tagged Claimed as a claim. Deliver the edgy lines dry, once. Bracketed text is a click.
 
-**01.** [Let the stream run.] Three questions: how I'd express Rillet's value, who I'd target and what moves them, and how I'd sequence the go-to-market and know it worked. Rillet's customers run businesses that never stop. Your company runs in real time. [Sweep across the frame, or press: the month piles into a ridge.] Then the month ends, and someone starts reconstructing it by hand. Your ERP runs on hindsight.
+**01.** [Let the stream run.] Three questions: how I'd express an AI-native ERP's value, who I'd target and what moves them, and how I'd sequence the go-to-market and know it worked. Its customers run businesses that never stop. Your company runs in real time. [Sweep across the frame, or press: the month piles into a ridge.] Then the month ends, and someone starts reconstructing it by hand. Your ERP runs on hindsight.
 
-**02.** Rillet is the ledger that shows its work. Three verbs. [Connect.] Every source lands the moment it happens. [Reason.] Agents do the digging, once. [Prove.] Source, reasoning, approver, on every number. Rillet's CEO already calls this a system of verifiable proof. I'd make that the brand. Every accountant was taught to show their work. This ledger is built to. "AI-native" stays on the shelf label, never the headline.
+**02.** The AI-native ERP is the ledger that shows its work. Three verbs. [Connect.] Every source lands the moment it happens. [Reason.] Agents do the digging, once. [Prove.] Source, reasoning, approver, on every number. The CEO already calls this a system of verifiable proof. I'd make that the brand. Every accountant was taught to show their work. This ledger is built to. "AI-native" stays on the shelf label, never the headline.
 
 **03.** Where I'd start: one close. Today the team exports, matches, accrues, allocates, recognizes, eliminates and ties out. That isn't accounting. It's archaeology. Follow one entry up the stack. [Source event: captured as it lands.] [Accounting logic: your policies.] [Journal entry: matched on arrival.] [Slow down. Human review.] And the controller still signs. We retire the archaeology, not the accountant. [Reporting result: the close confirms.]
 
@@ -476,11 +476,11 @@ Say "I would," not "Rillet will." Speak anything tagged Claimed as a claim. Deli
 
 **05.** Same ledger, different stakes. The controller wants the last week of the month back; the trigger is a close that slips past day ten. The CFO won't hire to keep up; the trigger is a fundraise, an IPO plan or next year's hiring plan. The CAO won't sign what can't be traced; the trigger is a first Big Four audit or SOX. Finance Systems is done babysitting middleware; the trigger is a renewal or an integration that breaks mid-close. Behind all four sits the auditor, who permits the switch.
 
-**06.** Rillet isn't a new product looking for proof; it has more than 600 customers. The receipts exist. Harvest: baseline 20 to 30 closes. Prove: the Parallel Close, their last close on our ledger. Launch: turn receipts into a category. Scale: surround the market. Internally, Product owns the evidence chain, Sales and Implementation run the Parallel Close, the CEO carries the category story, Legal reviews every claim.
+**06.** This isn't a new product looking for proof; it has more than 600 customers. The receipts exist. Harvest: baseline 20 to 30 closes. Prove: the Parallel Close, their last close on our ledger. Launch: turn receipts into a category. Scale: surround the market. Internally, Product owns the evidence chain, Sales and Implementation run the Parallel Close, the CEO carries the category story, Legal reviews every claim.
 
 **07.** Everywhere a controller looks, except close week. That's a joke and a rule: nothing controller-facing on days 1 to 7. One story, one ask: bring your last close. You earn channel complexity: six plays first, twelve by month twelve, fifteen at maturity. And the profession comes first: auditors permit switches.
 
-**08.** Impressions don't close the books. Behavior does. Four questions. [Use.] Are they running the books in Rillet? Work keeps passing through. [Value.] Did the close change? The month compresses. [Trust.] Do they trust it enough to sign? Open it up: result, review, source. [Commercial.] Does it move revenue? Marketing's north star is qualified Parallel Close starts.
+**08.** Impressions don't close the books. Behavior does. Four questions. [Use.] Are they running the books in the AI-native ERP? Work keeps passing through. [Value.] Did the close change? The month compresses. [Trust.] Do they trust it enough to sign? Open it up: result, review, source. [Commercial.] Does it move revenue? Marketing's north star is qualified Parallel Close starts.
 
 **09.** One next action, everywhere: bring your last close. [See the Parallel Close.] Scope: a signed period and a controller sponsor. Replay it beside them, original close untouched. Tie out, with every difference recorded. Then the controller decides. Start with one close, make it the last one anyone rebuilds, then earn revenue recognition, consolidation, reporting, the audit and eventually the IPO. That's the engine I'd build.
 

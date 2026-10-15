@@ -1,6 +1,6 @@
 /* =====================================================================
-   RILLET · SYSTEM OF PROOF
-   Mostly near-black, graphite, silver and warm white. Rillet purple is an
+   AI-NATIVE ERP · SYSTEM OF PROOF
+   Mostly near-black, graphite, silver and warm white. Brand purple is an
    accent only: an underline, a selected state, a point of approval.
    Space Grotesk for display, DM Sans for everything else.
    ===================================================================== */
@@ -16,7 +16,7 @@
   --violet: #240257;
   --lavender: #c1c6fe;
 
-  /* Verified on rillet.com: Space Grotesk (headings, 500), DM Sans (body,
+  /* Space Grotesk (headings, 500), DM Sans (body,
      400), JetBrains Mono (eyebrows and index numbers). Self-hosted. */
   --font-brand-display: var(--font-brand-display-face), "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: var(--font-body-face), "DM Sans", "Helvetica Neue", Arial, sans-serif;
@@ -64,7 +64,7 @@ table { border-collapse: collapse; }
 .display.lg { font-size: clamp(34px, min(4.5vw, 7.8vh), 92px); }
 .display.md { font-size: clamp(28px, min(3.4vw, 6vh), 64px); letter-spacing: -0.035em; line-height: 0.92; }
 .display.sm { font-size: clamp(18px, min(1.75vw, 3.2vh), 32px); letter-spacing: -0.0125em; line-height: 1; }
-/* Rillet's own headline setting, verified on rillet.com (2 Oct 2026):
+/* Headline setting:
    Space Grotesk 500 in sentence case, tracked about -0.5px at 32 to 40px.
    The main slides use it at display sizes, so tracking tightens with size.
    The appendix keeps its approved all-caps setting (the rules above). */
@@ -204,7 +204,7 @@ main > .sec:not(.w3d) { pointer-events: auto; }
 .gesture { margin-left: auto; color: var(--silver); transition: opacity 0.6s; }
 .gesture.gone { opacity: 0; }
 
-/* ---------------------------------------------------------- 02 · rillet */
+/* ------------------------------------------------------------- 02 · erp */
 /* the explainer is a real surface: wider, with room between its parts */
 .s02 .frame { display: grid; grid-template-columns: minmax(0, 1fr) clamp(350px, 35vw, 520px); gap: 20px clamp(28px, 3.6vw, 60px); }
 .s02-left { display: flex; flex-direction: column; gap: clamp(10px, 2vh, 20px); min-width: 0; transition: opacity 0.3s; }
